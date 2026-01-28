@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BusinessLogicLib/BusinessLogicLib.csproj" />
+  <Project Path="DataAccessLib/DataAccessLib.csproj" />
+  <Project Path="MVC_Front/MVC_Front.csproj" />
+</Solution>

@@ -5,16 +5,4 @@
     "Teacher": "temp",
     "DurationInWeeks": 5
   }
-  {
-    "Id": 2,
-    "Title": "temp",
-    "Teacher": "temp",
-    "DurationInWeeks": 6
-  }
-  {
-    "Id": 3,
-    "Title": "temp",
-    "Teacher": "temp",
-    "DurationInWeeks": 7
-  }
 ]

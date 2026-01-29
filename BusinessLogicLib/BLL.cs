@@ -1,15 +1,24 @@
-﻿using System.Text.Json;
+﻿using DataAccessLib;
+using System.Text.Json;
 
 namespace BusinessLogicLib
 {
     // behandler data
     public class BLL
     {
-        public List<Course> ProcessData()
+        public List<Course> GetCourseData()
         {
-            string path = Path.Combine(Directory.GetCurrentDirectory(),"DataAccessLib", "Data", "courses.json");
-            var jsonData = JsonSerializer.Deserialize<List<Course>>(File.ReadAllText(path)); //how to get access to Course model?
-            return jsonData;
+            DAL database = new DAL();
+            string json = database.GetData();
+            List<Course> courses = JsonSerializer.Deserialize<List<Course>>(json);
+            return courses;
+        }
+        public Course GetCourseData(int id)
+        {
+            DAL database = new DAL();
+            string json = database.GetData();
+            List<Course> courses = JsonSerializer.Deserialize<List<Course>>(json);
+            return courses.FirstOrDefault(course => course.Id == id);
         }
     }
 }
